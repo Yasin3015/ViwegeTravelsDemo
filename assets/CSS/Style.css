@@ -27,6 +27,9 @@
 .bg-body-tertiary {
     background-color: var(--dark) !important;
 }
+.navbar{
+    overflow: visible !important;
+}
 
 .navbar-brand {
     height: 70px;
@@ -45,6 +48,7 @@
 .navbar-collapse {
     width: fit-content !important;
     flex-grow: 0;
+    overflow: visible !important;
 }
 
 .nav-link {
@@ -281,7 +285,7 @@ textarea {
 
 .contact-us .container form .theForm button:hover {
     color: white;
-    background-color: var(--dark);
+    background-color: var(--orange);
     transition: all .7s !important;
 }
 
@@ -436,7 +440,7 @@ footer .text-md-end a:hover {
     position: relative;
     bottom: -10px;
     left: 0px;
-    z-index: 9090909090909999999999999999999999999999999999999999999999999999999999999000099999999999999999999999999999999999999999999999;
+    z-index: 9090909090909999999999999999999999999999999999999999999999999999999090909090909999999999999999999999999999999999999999999999999999999999999000099999999999999999999999999999999999999999999999;
 }
 .select__lang__active{
     transform: scaleY(1);
@@ -475,6 +479,17 @@ footer .text-md-end a:hover {
     }
     .discription .row{
         padding: 15px 0px !important;
+    }
+}
+@media (min-width:992px) and (max-width:1199px) {
+    .discrip h1{
+        font-size: 25px !important;
+    }
+    .lead{
+        font-size: 18px !important;
+    }
+    .discription .mt-4{
+        margin-top: 0px !important;
     }
 }
 
