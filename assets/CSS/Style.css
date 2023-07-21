@@ -422,6 +422,7 @@ footer .text-md-end a:hover {
 .select__lang img{
     height: 40px;
     margin: 0px 5px;
+    cursor: pointer !important;
 }
 .select__lang__list{
     width: 200px !important;
@@ -565,33 +566,53 @@ footer .text-md-end a:hover {
     padding: 40px 0px;
 }
 .font-blue{
-    color: var(--blue);
+    color: var(--orange);
 }
 .font-blue p,
 .font-blue li{
     color: var(--dark);
 }
-.cards .col-md-3{
-    border-radius: 15px;
-    margin: 10px;
-    width: calc(25% - 20px);
-    box-shadow: 2px 3px 15px rgb(119, 119, 119);
-}
-@media (max-width:1200px) {
-    .cards .col-md-3{
-        width: calc(33% - 20px);
-    }
-}
-@media (max-width:992px) {
-    .cards .col-md-3{
-        width: calc(50% - 20px);
-    }
-}
 @media (max-width:570px) {
     .lead{
         font-size: 16px;
     }
-    .cards .col-md-3{
-        width: calc(100% - 20px);
-    }
+}
+.box{
+    box-shadow: 2px 1px 10px var(--blue);
+    margin-top: 20px;
+    padding: 15px;
+    padding-bottom: 0px !important;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    height: fit-content;
+}
+.box .information{
+padding: 0px;
+margin: 0px;
+height: 0px;
+overflow: hidden;
+transition: all .3s;
+}
+.show{
+height: fit-content !important;
+overflow: hidden;
+transition: all .3s !important;
+}
+.more__disc .title{
+cursor: pointer;
+}
+.more__disc .title span{
+display: inline-block;
+padding-right: 10px !important;
+color: var(--orange);
+}
+.more__disc .title h5{
+margin-bottom: 0px !important;
+}
+.more__disc .title{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding-bottom: 15px;
 }

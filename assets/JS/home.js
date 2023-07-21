@@ -22,6 +22,9 @@ window.onscroll = function () {
 document.getElementById("selectIcon").onclick = function(){
     document.getElementById("selectDown").classList.toggle("select__lang__active")
 }
+document.getElementById("langSelected").onclick = function(){
+    document.getElementById("selectDown").classList.toggle("select__lang__active")
+}
 function select(){
     let langs = document.getElementsByClassName("select__lang__list__item");
     for(let i = 0 ; i<langs.length;i++){
