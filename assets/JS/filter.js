@@ -17,8 +17,8 @@ let myCards = document.getElementsByClassName("carde");
       let type = document.getElementById("type").value;
       let tripClass = document.getElementById("tripClass").value;
       switch(type){
-        case "Excursions (all)":
-          if(tripClass === "Economic (500$ or less)"){
+        case "Excursions":
+          if(tripClass === "Economic"){
               for(let i = 0; i<arr.length;i++){
                 if(arr[i].Price <= 500)
                   myCards[i].style.display="block";
@@ -26,7 +26,7 @@ let myCards = document.getElementsByClassName("carde");
                   myCards[i].style.display="none";
               }
           }
-          else if(tripClass === "VIP (more than 500$)"){
+          else if(tripClass === "VIP"){
               for(let i = 0; i<arr.length;i++){
                   if(parseFloat(arr[i].Price) > 500)
                     myCards[i].style.display="block";
@@ -36,8 +36,8 @@ let myCards = document.getElementsByClassName("carde");
             
           }
         break;
-        case "Transfers (1day)":
-          if(tripClass === "Economic (500$ or less)"){
+        case "Transfers":
+          if(tripClass === "Economic"){
               for(let i = 0; i<arr.length;i++){
                 if(arr[i].Price <= 500 && arr[i].Duration === "Duration: 1D")
                   myCards[i].style.display="block";
@@ -45,7 +45,7 @@ let myCards = document.getElementsByClassName("carde");
                   myCards[i].style.display="none";
               }
           }
-          else if(tripClass === "VIP (more than 500$)"){
+          else if(tripClass === "VIP"){
               for(let i = 0; i<arr.length;i++){
                   if(arr[i].Price > 500 && arr[i].Duration === "Duration: 1D")
                     myCards[i].style.display="block";
@@ -55,8 +55,8 @@ let myCards = document.getElementsByClassName("carde");
             
           }
         break;
-        case "Accommodations (more than 1day)":
-          if(tripClass === "Economic (500$ or less)"){
+        case "Accommodations":
+          if(tripClass === "Economic"){
               for(let i = 0; i<arr.length;i++){
                 if(arr[i].Price <= 500 && arr[i].Duration !== "Duration: 1D")
                   myCards[i].style.display="block";
@@ -64,7 +64,7 @@ let myCards = document.getElementsByClassName("carde");
                   myCards[i].style.display="none";
               }
           }
-          else if(tripClass === "VIP (more than 500$)"){
+          else if(tripClass === "VIP"){
               for(let i = 0; i<arr.length;i++){
                   if(arr[i].Price > 500 && arr[i].Duration !== "Duration: 1D")
                     myCards[i].style.display="block";
