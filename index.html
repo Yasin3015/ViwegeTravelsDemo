@@ -15,7 +15,7 @@
 <body>
 
 <!-- ================== Go To Top ====================== -->
-    <button class="goup hide" onclick="topFunction()" id="myBtn" title="Go to top">
+    <button class="goup hide bor" onclick="topFunction()" id="myBtn" title="Go to top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
@@ -148,435 +148,474 @@
                 <h1>Book Your Excursions Now In Egypt</h1>
                 <p>Explore and Experience The Magic Of Egypt During Your Trip.</p>
             </div>
-            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
-                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
-                        aria-selected="true">All</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
-                        data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
-                        aria-selected="false">Cairo</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
-                        data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
-                        aria-selected="false">Sharm El-Shaikh</button>
-                </li>
-                
-            </ul>
-            <div class="tab-content" id="pills-tabContent">
+            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                <div class="filter text-center">
+                  <select id="type">
+                    <option>Excursions (all)</option>
+                    <option>Transfers (1day)</option>
+                    <option>Accommodations (more than 1day)</option>
+                  </select>
+                  <select id="tripClass">
+                    <option>Economic (500$ or less)</option>
+                    <option>VIP (more than 500$)</option>
+                  </select>
+                  <button type="button" class="btn btn-primary" id="filterButton">filter Trips</button>
+                </div>
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                      type="button" role="tab" aria-controls="pills-home" aria-selected="true">All</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                      type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Cairo</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                      type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Sharm El-Shaikh</button>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="other.html">Other</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
-                    tabindex="0">
-                    <div class="row mb-5 mt-2">
-                        <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
-                            <img src="assets/Images/Cairo-1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card__header">
-                                    <h5 class="card-title">COP 27 Discover Cairo</h5>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Trip NO: 1</span>
-                                        <span>Price: 440$</span>
-                                    </div>
-                                </div>
-                                <p class="card-text text-overflow">
-                                    Accommodation as stated in 5 or 4 star hotels in Cairo in Standard rooms
-                                    on bed and breakfast basis.
-                                    All transfers in air-conditioned vehicles with English or French speaking...
-                                </p>
-                                <a href="trip.html" class="btn btn-primary">More Details</a>
-                            </div>
+                  tabindex="0">
+                  <div class="row mb-5 mt-2">
+                    <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-up">
+                      <img src="assets/Images/Cairo-1.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="card__header">
+                          <h5 class="card-title">COP 27 Discover Cairo</h5>
+                          <div class="d-flex justify-content-between">
+                            <span>Trip NO: 1</span>
+                            <span class="price">Price: <span>440</span>$</span>
+                            <span class="duration">Duration: 3D</span>
+                          </div>
                         </div>
-                        <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-down">
-                            <img src="assets/Images/cairo-2.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card__header">
-                                    <h5 class="card-title">Land Of The Pharaohs</h5>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Trip NO: 2</span>
-                                        <span>Price: 1167$</span>
-                                    </div>
-                                </div>
-                                <p class="card-text text-overflow">
-                                    Accommodation as stated in 5 or 4 stars hotels in Cairo in standard rooms
-                                    on bed and breakfast basis.
-                                    Accommodation as stated on board 5 stars... </p>
-                                <a href="trip.html" class="btn btn-primary">More Details</a>
-                            </div>
-                        </div>
-                        <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
-                            <img src="assets/Images/cairo-3.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card__header">
-                                    <h5 class="card-title">Discover Cairo & Alex</h5>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Trip NO: 3</span>
-                                        <span>Price: 621$</span>
-                                    </div>
-                                </div>
-                                <p class="card-text text-overflow">
-                                    Accommodation as stated in 5 or 4-stars Hotels in Cairo in standard rooms
-                                    on bed and breakfast basis.
-                                    All transfers are in air-conditioned vehicles with English or French... </p>
-                                <a href="trip.html" class="btn btn-primary">More Details</a>
-                            </div>
-                        </div>
-                        <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12" data-aos="fade-down">
-                            <img src="assets/Images/cairo-4.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card__header">
-                                    <h5 class="card-title">Classic Egypt</h5>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Trip NO: 4</span>
-                                        <span>Price: 1034$</span>
-                                    </div>
-                                </div>
-                                <p class="card-text text-overflow">
-                                    Accommodation as stated in 5 or 4-star hotels in Cairo in Standard rooms on
-                                    bed and breakfast basis.
-                                    Accommodation as stated on board a 5-star Nile </p>
-                                <a href="trip.html" class="btn btn-primary">More Details</a>
-                            </div>
-                        </div>
-                        <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-up">
-                            <img src="assets/Images/sh-1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card__header">
-                                    <h5 class="card-title">Sharm El Sheikh City...</h5>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Trip NO: 5</span>
-                                        <span>Price: 65$</span>
-                                    </div>
-                                </div>
-                                <p class="card-text text-overflow">
-                                    Add a unique experience to your travel portfolio, and explore the sunny city of
-                                    Sharm El Sheikh. Our local guide will show you the way to make your best memories in
-                                    beautiful Sharm El Sheikh.
-                                </p>
-                                <a href="trip.html" class="btn btn-primary">More Details</a>
-                            </div>
-                        </div>
-                        <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-down">
-                            <img src="assets/Images/slide-2.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card__header">
-                                    <h5 class="card-title">Neverland Show</h5>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Trip NO: 6</span>
-                                        <span>Price: 95$</span>
-                                    </div>
-                                </div>
-                                <p class="card-text text-overflow">
-                                    Witness the biggest journey in the Middle East while enjoying an oriental delicious
-                                    dinner. An evening to remember!
-
-                                    After the hotel pickup by a comfortable and air...
-                                </p>
-                                <a href="trip.html" class="btn btn-primary">More Details</a>
-                            </div>
-                        </div>
-                        <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-up">
-                            <img src="assets/Images/sh-3.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card__header">
-                                    <h5 class="card-title">Snorkeling at Ras Moh...</h5>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Trip NO: 7</span>
-                                        <span>Price: 45$</span>
-                                    </div>
-                                </div>
-                                <p class="card-text text-overflow">
-                                    Discover the beautiful underwater colors and marine life of the National Park of Ras
-                                    Mohamed and spend an unforgettable day , with intact land and sea.
-                                </p>
-                                <a href="trip.html" class="btn btn-primary">More Details</a>
-                            </div>
-                        </div>
-                        <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-down">
-                            <img src="assets/Images/sh-4.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card__header">
-                                    <h5 class="card-title">Intro Dive at Ras Moh...</h5>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Trip NO: 8</span>
-                                        <span>Price: 95$</span>
-                                    </div>
-                                </div>
-                                <p class="card-text text-overflow">
-                                    Discover the beautiful underwater colors and marine life of the national park of Ras
-                                    Mohamed and spend an unforgettable day, with intact land and sea </p>
-                                <a href="trip.html" class="btn btn-primary">More Details</a>
-                            </div>
-                        </div>
-                        <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-up">
-                            <img src="assets/Images/sh-5.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card__header">
-                                    <h5 class="card-title">Ras Mohamed Elite...</h5>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Trip NO: 9</span>
-                                        <span>Price: 115$</span>
-                                    </div>
-                                </div>
-                                <p class="card-text text-overflow">
-                                    Exceed all expectations with the Elite VIP cruise and enjoy a day of total
-                                    relaxation, with a unique chance to explore the extraordinary scenery of the Red Sea
-                                </p>
-                                <a href="trip.html" class="btn btn-primary">More Details</a>
-                            </div>
-                        </div>
-
-                        <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-down">
-                            <img src="assets/Images/sh-7.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card__header">
-                                    <h5 class="card-title">Private Boat To Ras M...</h5>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Trip NO: 10</span>
-                                        <span>Price: 3000$</span>
-                                    </div>
-                                </div>
-                                <p class="card-text text-overflow">
-                                    Exceed all expectations with the Elite VIP cruise and enjoy a day of total
-                                    relaxation, with a unique chance to explore the extraordinary scenery of
-                                </p>
-                                <a href="trip.html" class="btn btn-primary">More Details</a>
-                            </div>
-                        </div>
-
-                        <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-up">
-                            <img src="assets/Images/sh-6.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card__header">
-                                    <h5 class="card-title">Night Cruise and Dinner</h5>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Trip NO: 11</span>
-                                        <span>Price: 95$</span>
-                                    </div>
-                                </div>
-                                <p class="card-text text-overflow">
-                                    Spend an unforgettable day on private basis with your family and friends, with
-                                    intact land and sea. Relax, unwind, and get a fantastic tan.
-                                </p>
-                                <a href="trip.html" class="btn btn-primary">More Details</a>
-                            </div>
-                        </div>
+                        <p class="card-text text-overflow">
+                          Accommodation as stated in 5 or 4 star hotels in Cairo in Standard rooms
+                          on bed and breakfast basis.
+                          All transfers in air-conditioned vehicles with English or French speaking...
+                        </p>
+                        <a href="trip.html" class="btn btn-primary">More Details</a>
+                      </div>
                     </div>
-                </div>
-                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
-                    tabindex="0">
-                    <div class="row mb-5 mt-2">
-                        <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-up">
-                            <img src="assets/Images/Cairo-1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card__header">
-                                    <h5 class="card-title">COP 27 Discover Cairo</h5>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Trip NO: 1</span>
-                                        <span>Price: 440$</span>
-                                    </div>
-                                </div>
-                                <p class="card-text text-overflow">
-                                    Accommodation as stated in 5 or 4 star hotels in Cairo in Standard rooms
-                                    on bed and breakfast basis.
-                                    All transfers in air-conditioned vehicles with English or French speaking...
-                                </p>
-                                <a href="trip.html" class="btn btn-primary">More Details</a>
-                            </div>
+                    <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-down">
+                      <img src="assets/Images/cairo-2.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="card__header">
+                          <h5 class="card-title">Land Of The Pharaohs</h5>
+                          <div class="d-flex justify-content-between">
+                            <span>Trip NO: 2</span>
+                            <span class="price">Price: <span>1167</span>$</span>
+                            <span class="duration">Duration: 1D</span>
+                          </div>
                         </div>
-                        <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-down">
-                            <img src="assets/Images/cairo-2.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card__header">
-                                    <h5 class="card-title">Land Of The Pharaohs</h5>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Trip NO: 2</span>
-                                        <span>Price: 1167$</span>
-                                    </div>
-                                </div>
-                                <p class="card-text text-overflow">
-                                    Accommodation as stated in 5 or 4 stars hotels in Cairo in standard rooms
-                                    on bed and breakfast basis.
-                                    Accommodation as stated on board 5 stars... </p>
-                                <a href="trip.html" class="btn btn-primary">More Details</a>
-                            </div>
-                        </div>
-                        <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-up">
-                            <img src="assets/Images/cairo-3.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card__header">
-                                    <h5 class="card-title">Discover Cairo & Alex</h5>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Trip NO: 3</span>
-                                        <span>Price: 621$</span>
-                                    </div>
-                                </div>
-                                <p class="card-text text-overflow">
-                                    Accommodation as stated in 5 or 4-stars Hotels in Cairo in standard rooms
-                                    on bed and breakfast basis.
-                                    All transfers are in air-conditioned vehicles with English or French... </p>
-                                <a href="trip.html" class="btn btn-primary">More Details</a>
-                            </div>
-                        </div>
-                        <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-down">
-                            <img src="assets/Images/cairo-4.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card__header">
-                                    <h5 class="card-title">Classic Egypt</h5>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Trip NO: 4</span>
-                                        <span>Price: 1034$</span>
-                                    </div>
-                                </div>
-                                <p class="card-text text-overflow">
-                                    Accommodation as stated in 5 or 4-star hotels in Cairo in Standard rooms on
-                                    bed and breakfast basis.
-                                    Accommodation as stated on board a 5-star Nile
-                                </p>
-                                <a href="trip.html" class="btn btn-primary">More Details</a>
-                            </div>
-                        </div>
-
-
-
+                        <p class="card-text text-overflow">
+                          Accommodation as stated in 5 or 4 stars hotels in Cairo in standard rooms
+                          on bed and breakfast basis.
+                          Accommodation as stated on board 5 stars... </p>
+                        <a href="trip.html" class="btn btn-primary">More Details</a>
+                      </div>
                     </div>
-                </div>
-                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
-                    tabindex="0">
-                    <div class="row mb-5 mt-2">
-                        <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-up">
-                            <img src="assets/Images/sh-1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card__header">
-                                    <h5 class="card-title">Sharm El Sheikh City...</h5>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Trip NO: 5</span>
-                                        <span>Price: 65$</span>
-                                    </div>
-                                </div>
-                                <p class="card-text text-overflow">
-                                    Add a unique experience to your travel portfolio, and explore the sunny city of
-                                    Sharm El Sheikh. Our local guide will show you the way to make your best memories in
-                                    beautiful Sharm El Sheikh.
-                                </p>
-                                <a href="trip.html" class="btn btn-primary">More Details</a>
-                            </div>
+                    <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-up">
+                      <img src="assets/Images/cairo-3.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="card__header">
+                          <h5 class="card-title">Discover Cairo & Alex</h5>
+                          <div class="d-flex justify-content-between">
+                            <span>Trip NO: 3</span>
+                            <span class="price">Price: <span>621</span>$</span>
+                            <span class="duration">Duration: 4D</span>
+                          </div>
                         </div>
-                        <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-down">
-                            <img src="assets/Images/slide-2.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card__header">
-                                    <h5 class="card-title">Neverland Show</h5>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Trip NO: 6</span>
-                                        <span>Price: 95$</span>
-                                    </div>
-                                </div>
-                                <p class="card-text text-overflow">
-                                    Witness the biggest journey in the Middle East while enjoying an oriental delicious
-                                    dinner. An evening to remember!
-
-                                    After the hotel pickup by a comfortable and air... </p>
-                                <a href="trip.html" class="btn btn-primary">More Details</a>
-                            </div>
-                        </div>
-                        <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-up">
-                            <img src="assets/Images/sh-3.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card__header">
-                                    <h5 class="card-title">Snorkeling at Ras Moh...</h5>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Trip NO: 7</span>
-                                        <span>Price: 45$</span>
-                                    </div>
-                                </div>
-                                <p class="card-text text-overflow">
-                                    Discover the beautiful underwater colors and marine life of the National Park of Ras
-                                    Mohamed and spend an unforgettable day , with intact land and sea.
-                                </p>
-                                <a href="trip.html" class="btn btn-primary">More Details</a>
-                            </div>
-                        </div>
-                        <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-down">
-                            <img src="assets/Images/sh-4.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card__header">
-                                    <h5 class="card-title">Intro Dive at Ras Moh...</h5>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Trip NO: 8</span>
-                                        <span>Price: 95$</span>
-                                    </div>
-                                </div>
-                                <p class="card-text text-overflow">
-                                    Discover the beautiful underwater colors and marine life of the national park of Ras
-                                    Mohamed and spend an unforgettable day, with intact land and sea
-                                </p>
-                                <a href="trip.html" class="btn btn-primary">More Details</a>
-                            </div>
-                        </div>
-
-                        <!--  -->
-
-                        <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-up">
-                            <img src="assets/Images/sh-5.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card__header">
-                                    <h5 class="card-title">Ras Mohamed Elite...</h5>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Trip NO: 9</span>
-                                        <span>Price: 115$</span>
-                                    </div>
-                                </div>
-                                <p class="card-text text-overflow">
-                                    Exceed all expectations with the Elite VIP cruise and enjoy a day of total
-                                    relaxation, with a unique chance to explore the extraordinary scenery of the Red Sea
-                                </p>
-                                <a href="trip.html" class="btn btn-primary">More Details</a>
-                            </div>
-                        </div>
-
-                        <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-down">
-                            <img src="assets/Images/sh-7.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card__header">
-                                    <h5 class="card-title">Private Boat To Ras M...</h5>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Trip NO: 10</span>
-                                        <span>Price: 3000$</span>
-                                    </div>
-                                </div>
-                                <p class="card-text text-overflow">
-                                    Exceed all expectations with the Elite VIP cruise and enjoy a day of total
-                                    relaxation, with a unique chance to explore the extraordinary scenery of
-                                </p>
-                                <a href="trip.html" class="btn btn-primary">More Details</a>
-                            </div>
-                        </div>
-
-                        <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-up">
-                            <img src="assets/Images/sh-6.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="card__header">
-                                    <h5 class="card-title">Night Cruise and Dinner</h5>
-                                    <div class="d-flex justify-content-between">
-                                        <span>Trip NO: 11</span>
-                                        <span>Price: 95$</span>
-                                    </div>
-                                </div>
-                                <br>
-                                <p class="card-text text-overflow">
-                                    Spend an unforgettable day on private basis with your family and friends, with
-                                    intact land and sea. Relax, unwind, and get a fantastic tan.
-                                    
-                                </p>
-                                <a href="trip.html" class="btn btn-primary">More Details</a>
-                            </div>
-                        </div>
-
+                        <p class="card-text text-overflow">
+                          Accommodation as stated in 5 or 4-stars Hotels in Cairo in standard rooms
+                          on bed and breakfast basis.
+                          All transfers are in air-conditioned vehicles with English or French... </p>
+                        <a href="trip.html" class="btn btn-primary">More Details</a>
+                      </div>
                     </div>
+                    <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-down">
+                      <img src="assets/Images/cairo-4.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="card__header">
+                          <h5 class="card-title">Classic Egypt</h5>
+                          <div class="d-flex justify-content-between">
+                            <span>Trip NO: 4</span>
+                            <span class="price">Price: <span>1034</span>$</span>
+                            <span class="duration">Duration: 6D</span>
+                          </div>
+                        </div>
+                        <p class="card-text text-overflow">
+                          Accommodation as stated in 5 or 4-star hotels in Cairo in Standard rooms on
+                          bed and breakfast basis.
+                          Accommodation as stated on board a 5-star Nile
+                        </p>
+                        <a href="trip.html" class="btn btn-primary">More Details</a>
+                      </div>
+                    </div>
+                    <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 economic  " data-aos="fade-up">
+                      <img src="assets/Images/sh-1.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="card__header">
+                          <h5 class="card-title">Sharm El Sheikh City...</h5>
+                          <div class="d-flex justify-content-between">
+                            <span>Trip NO: 5</span>
+                            <span class="price">Price: <span>650</span>$</span>
+                            <span class="duration">Duration: 1D</span>
+                          </div>
+                        </div>
+                        <p class="card-text text-overflow">
+                          Add a unique experience to your travel portfolio, and explore the sunny city of
+                          Sharm El Sheikh. Our local guide will show you the way to make your best memories in
+                          beautiful Sharm El Sheikh.
+                        </p>
+                        <a href="trip.html" class="btn btn-primary">More Details</a>
+                      </div>
+                    </div>
+                    <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-down">
+                      <img src="assets/Images/slide-2.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="card__header">
+                          <h5 class="card-title">Neverland Show</h5>
+                          <div class="d-flex justify-content-between">
+                            <span>Trip NO: 6</span>
+                            <span class="price">Price: <span>95</span>$</span>
+                            <span class="duration">Duration: 1D</span>
+                          </div>
+                        </div>
+                        <p class="card-text text-overflow">
+                          Witness the biggest journey in the Middle East while enjoying an oriental delicious
+                          dinner. An evening to remember!
+            
+                          After the hotel pickup by a comfortable and air... </p>
+                        <a href="trip.html" class="btn btn-primary">More Details</a>
+                      </div>
+                    </div>
+                    <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-up">
+                      <img src="assets/Images/sh-3.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="card__header">
+                          <h5 class="card-title">Snorkeling at Ras Moh...</h5>
+                          <div class="d-flex justify-content-between">
+                            <span>Trip NO: 7</span>
+                            <span class="price">Price: <span>45</span> $</span>
+                            <span class="duration">Duration: 1D</span>
+                          </div>
+                        </div>
+                        <p class="card-text text-overflow">
+                          Discover the beautiful underwater colors and marine life of the National Park of Ras
+                          Mohamed and spend an unforgettable day , with intact land and sea.
+                        </p>
+                        <a href="trip.html" class="btn btn-primary">More Details</a>
+                      </div>
+                    </div>
+                    <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-down">
+                      <img src="assets/Images/sh-4.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="card__header">
+                          <h5 class="card-title">Intro Dive at Ras Moh...</h5>
+                          <div class="d-flex justify-content-between">
+                            <span>Trip NO: 8</span>
+                            <span class="price">Price: <span>95</span>$</span>
+                            <span class="duration">Duration: 1D</span>
+                          </div>
+                        </div>
+                        <p class="card-text text-overflow">
+                          Discover the beautiful underwater colors and marine life of the national park of Ras
+                          Mohamed and spend an unforgettable day, with intact land and sea
+                        </p>
+                        <a href="trip.html" class="btn btn-primary">More Details</a>
+                      </div>
+                    </div>
+            
+                    <!--  -->
+            
+                    <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-up">
+                      <img src="assets/Images/sh-5.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="card__header">
+                          <h5 class="card-title">Ras Mohamed Elite...</h5>
+                          <div class="d-flex justify-content-between">
+                            <span>Trip NO: 9</span>
+                            <span class="price">Price: <span>115</span> $</span>
+                            <span class="duration">Duration: 2D</span>
+                          </div>
+                        </div>
+                        <p class="card-text text-overflow">
+                          Exceed all expectations with the Elite VIP cruise and enjoy a day of total
+                          relaxation, with a unique chance to explore the extraordinary scenery of the Red Sea
+                        </p>
+                        <a href="trip.html" class="btn btn-primary">More Details</a>
+                      </div>
+                    </div>
+            
+                    <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-down">
+                      <img src="assets/Images/sh-7.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="card__header">
+                          <h5 class="card-title">Private Boat To Ras M...</h5>
+                          <div class="d-flex justify-content-between">
+                            <span>Trip NO: 10</span>
+                            <span class="price">Price: <span>3000</span> $</span>
+                            <span class="duration">Duration: 4D</span>
+                          </div>
+                        </div>
+                        <p class="card-text text-overflow">
+                          Exceed all expectations with the Elite VIP cruise and enjoy a day of total
+                          relaxation, with a unique chance to explore the extraordinary scenery of
+                        </p>
+                        <a href="trip.html" class="btn btn-primary">More Details</a>
+                      </div>
+                    </div>
+            
+                    <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-up">
+                      <img src="assets/Images/sh-6.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="card__header">
+                          <h5 class="card-title">Night Cruise and Dinner</h5>
+                          <div class="d-flex justify-content-between">
+                            <span>Trip NO: 11</span>
+                            <span class="price">Price: <span>95</span> $</span>
+                            <span class="duration">Duration: 1D</span>
+                          </div>
+                        </div>
+                        <br>
+                        <p class="card-text text-overflow">
+                          Spend an unforgettable day on private basis with your family and friends, with
+                          intact land and sea. Relax, unwind, and get a fantastic tan.
+            
+                        </p>
+                        <a href="trip.html" class="btn btn-primary">More Details</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                  <div class="row mb-5 mt-2">
+                    <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-up">
+                      <img src="assets/Images/Cairo-1.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="card__header">
+                          <h5 class="card-title">COP 27 Discover Cairo</h5>
+                          <div class="d-flex justify-content-between">
+                            <span>Trip NO: 1</span>
+                            <span class="price">Price: <span>440</span>$</span>
+                            <span class="duration">Duration: 3D</span>
+                          </div>
+                        </div>
+                        <p class="card-text text-overflow">
+                          Accommodation as stated in 5 or 4 star hotels in Cairo in Standard rooms
+                          on bed and breakfast basis.
+                          All transfers in air-conditioned vehicles with English or French speaking...
+                        </p>
+                        <a href="trip.html" class="btn btn-primary">More Details</a>
+                      </div>
+                    </div>
+                    <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-down">
+                      <img src="assets/Images/cairo-2.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="card__header">
+                          <h5 class="card-title">Land Of The Pharaohs</h5>
+                          <div class="d-flex justify-content-between">
+                            <span>Trip NO: 2</span>
+                            <span class="price">Price: <span>1167</span>$</span>
+                            <span class="duration">Duration: 1D</span>
+                          </div>
+                        </div>
+                        <p class="card-text text-overflow">
+                          Accommodation as stated in 5 or 4 stars hotels in Cairo in standard rooms
+                          on bed and breakfast basis.
+                          Accommodation as stated on board 5 stars... </p>
+                        <a href="trip.html" class="btn btn-primary">More Details</a>
+                      </div>
+                    </div>
+                    <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-up">
+                      <img src="assets/Images/cairo-3.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="card__header">
+                          <h5 class="card-title">Discover Cairo & Alex</h5>
+                          <div class="d-flex justify-content-between">
+                            <span>Trip NO: 3</span>
+                            <span class="price">Price: <span>621</span>$</span>
+                            <span class="duration">Duration: 4D</span>
+                          </div>
+                        </div>
+                        <p class="card-text text-overflow">
+                          Accommodation as stated in 5 or 4-stars Hotels in Cairo in standard rooms
+                          on bed and breakfast basis.
+                          All transfers are in air-conditioned vehicles with English or French... </p>
+                        <a href="trip.html" class="btn btn-primary">More Details</a>
+                      </div>
+                    </div>
+                    <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-down">
+                      <img src="assets/Images/cairo-4.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="card__header">
+                          <h5 class="card-title">Classic Egypt</h5>
+                          <div class="d-flex justify-content-between">
+                            <span>Trip NO: 4</span>
+                            <span class="price">Price: <span>1034</span>$</span>
+                            <span class="duration">Duration: 6D</span>
+                          </div>
+                        </div>
+                        <p class="card-text text-overflow">
+                          Accommodation as stated in 5 or 4-star hotels in Cairo in Standard rooms on
+                          bed and breakfast basis.
+                          Accommodation as stated on board a 5-star Nile
+                        </p>
+                        <a href="trip.html" class="btn btn-primary">More Details</a>
+                      </div>
+                    </div>
+            
+            
+            
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+                  <div class="row mb-5 mt-2">
+                    <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 economic  " data-aos="fade-up">
+                      <img src="assets/Images/sh-1.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="card__header">
+                          <h5 class="card-title">Sharm El Sheikh City...</h5>
+                          <div class="d-flex justify-content-between">
+                            <span>Trip NO: 5</span>
+                            <span class="price">Price: <span>6500</span>$</span>
+                            <span class="duration">Duration: 1D</span>
+                          </div>
+                        </div>
+                        <p class="card-text text-overflow">
+                          Add a unique experience to your travel portfolio, and explore the sunny city of
+                          Sharm El Sheikh. Our local guide will show you the way to make your best memories in
+                          beautiful Sharm El Sheikh.
+                        </p>
+                        <a href="trip.html" class="btn btn-primary">More Details</a>
+                      </div>
+                    </div>
+                    <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-down">
+                      <img src="assets/Images/slide-2.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="card__header">
+                          <h5 class="card-title">Neverland Show</h5>
+                          <div class="d-flex justify-content-between">
+                            <span>Trip NO: 6</span>
+                            <span class="price">Price: <span>95</span>$</span>
+                            <span class="duration">Duration: 1D</span>
+                          </div>
+                        </div>
+                        <p class="card-text text-overflow">
+                          Witness the biggest journey in the Middle East while enjoying an oriental delicious
+                          dinner. An evening to remember!
+            
+                          After the hotel pickup by a comfortable and air... </p>
+                        <a href="trip.html" class="btn btn-primary">More Details</a>
+                      </div>
+                    </div>
+                    <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-up">
+                      <img src="assets/Images/sh-3.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="card__header">
+                          <h5 class="card-title">Snorkeling at Ras Moh...</h5>
+                          <div class="d-flex justify-content-between">
+                            <span>Trip NO: 7</span>
+                            <span class="price">Price: <span>45</span>$</span>
+                            <span class="duration">Duration: 1D</span>
+                          </div>
+                        </div>
+                        <p class="card-text text-overflow">
+                          Discover the beautiful underwater colors and marine life of the National Park of Ras
+                          Mohamed and spend an unforgettable day , with intact land and sea.
+                        </p>
+                        <a href="trip.html" class="btn btn-primary">More Details</a>
+                      </div>
+                    </div>
+                    <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-down">
+                      <img src="assets/Images/sh-4.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="card__header">
+                          <h5 class="card-title">Intro Dive at Ras Moh...</h5>
+                          <div class="d-flex justify-content-between">
+                            <span>Trip NO: 8</span>
+                            <span class="price">Price: <span>95</span>$</span>
+                            <span class="duration">Duration: 1D</span>
+                          </div>
+                        </div>
+                        <p class="card-text text-overflow">
+                          Discover the beautiful underwater colors and marine life of the national park of Ras
+                          Mohamed and spend an unforgettable day, with intact land and sea
+                        </p>
+                        <a href="trip.html" class="btn btn-primary">More Details</a>
+                      </div>
+                    </div>
+            
+                    <!--  -->
+            
+                    <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-up">
+                      <img src="assets/Images/sh-5.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="card__header">
+                          <h5 class="card-title">Ras Mohamed Elite...</h5>
+                          <div class="d-flex justify-content-between">
+                            <span>Trip NO: 9</span>
+                            <span class="price">Price: <span>115</span>$</span>
+                            <span class="duration">Duration: 2D</span>
+                          </div>
+                        </div>
+                        <p class="card-text text-overflow">
+                          Exceed all expectations with the Elite VIP cruise and enjoy a day of total
+                          relaxation, with a unique chance to explore the extraordinary scenery of the Red Sea
+                        </p>
+                        <a href="trip.html" class="btn btn-primary">More Details</a>
+                      </div>
+                    </div>
+            
+                    <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-down">
+                      <img src="assets/Images/sh-7.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="card__header">
+                          <h5 class="card-title">Private Boat To Ras M...</h5>
+                          <div class="d-flex justify-content-between">
+                            <span>Trip NO: 10</span>
+                            <span class="price">Price: <span>3000</span>$</span>
+                            <span class="duration">Duration: 4D</span>
+                          </div>
+                        </div>
+                        <p class="card-text text-overflow">
+                          Exceed all expectations with the Elite VIP cruise and enjoy a day of total
+                          relaxation, with a unique chance to explore the extraordinary scenery of
+                        </p>
+                        <a href="trip.html" class="btn btn-primary">More Details</a>
+                      </div>
+                    </div>
+            
+                    <div class="carde col-xl-3 col-lg-4 col-md-6 col-sm-12 " data-aos="fade-up">
+                      <img src="assets/Images/sh-6.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="card__header">
+                          <h5 class="card-title">Night Cruise and Dinner</h5>
+                          <div class="d-flex justify-content-between">
+                            <span>Trip NO: 11</span>
+                            <span class="price">Price: <span>95</span>$</span>
+                            <span class="duration">Duration: 1D</span>
+                          </div>
+                        </div>
+                        <br>
+                        <p class="card-text text-overflow">
+                          Spend an unforgettable day on private basis with your family and friends, with
+                          intact land and sea. Relax, unwind, and get a fantastic tan.
+            
+                        </p>
+                        <a href="trip.html" class="btn btn-primary">More Details</a>
+                      </div>
+                    </div>
+            
+                  </div>
+                </div>
+              </div>
         </div>
     </div>
 
@@ -655,6 +694,7 @@
 
     <script src="assets/JS/bootstrap.min.js"></script>
     <script src="assets/JS/home.js"></script>
+    <script src="assets/JS/filter.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
