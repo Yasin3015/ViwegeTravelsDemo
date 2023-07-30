@@ -669,6 +669,24 @@ select{
         font-size: 13px !important;
     }
 }
+@media (max-width: 420px) {
+    .filter{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between !important;
+    }
+    select{
+        padding: 10px 5px !important;
+        width: 105px !important;
+        font-size: 11px !important;
+    }
+    .filter button{
+        font-size: 11px !important;
+        padding: 10px 5px !important;
+        width: 70px !important;
+    }
+}
 
 .otherTrips{
     height: 100vh;
@@ -751,11 +769,3 @@ select{
         border-radius: 0px !important;
     }
 }
-/* .otherTrips form{
-    width: 90% !important;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-
-} */
