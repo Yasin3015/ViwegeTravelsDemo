@@ -199,6 +199,13 @@
     background-color: var(--blue) !important;
     opacity: 1;
 }
+.card__header h5,
+.card__header span{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
 
 /* /////////////////////start contact //////////// */
 .contact-us {
